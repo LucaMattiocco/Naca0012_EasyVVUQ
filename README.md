@@ -1,30 +1,37 @@
-# Naca0012_PCE
-
+# Project Repository Overview
 
 This repository contains the following files:
 
-Java Template File: Java.jinja2
+1. **Java Template File**: `Java.jinja2`
+2. **Star-CCM+ Simulation File**: `.sim`
+3. **Python Script for Uncertainty Evaluation**: `Python_script.py`
 
-Star-CCM+ Simulation File: .sim
+## Setup Instructions
 
-Python Script for Uncertainty Evaluation: Python_script.py
+Before running the code, ensure the following steps are completed:
 
+1. **Set File Permissions**: Make sure all files have the necessary access permissions.
+2. **Update File Paths**: Modify the file paths in the scripts to match your local environment.
 
+## Code Structure
 
-Setup Instructions
+### 1. Directory Management
 
-Before running the code, ensure that you have set the appropriate file permissions and updated all necessary file paths for the simulations.
+This section of the code handles the organization and management of the repository.
 
-Code Structure
+### 2. Simulation Tools Setup
 
-The code is divided into three main sections:
+This section establishes the tools required for running the simulations.
 
-Directory Management: Handles the organization and management of the repository.
+### 3. Post-Processing
 
-Simulation Tools Setup: Establishes the tools required for running the simulations.
+This section focuses on analyzing and processing the simulation results.
 
-Post-Processing: Focuses on analyzing and processing the simulation results.
+## Common Issues
 
-
-Common Issues
 A common issue is Star-CCM+ failing to run the simulations due to incorrect paths. To troubleshoot, run a single simulation using the Windows shell to verify that the paths are correctly configured.
+
+```bash
+# Example Windows shell command to run a Star-CCM+ simulation
+"C:\Program Files\CD-adapco\Star-CCM+\16.06.007\star\bin\starccm+" -batch simulation.sim
+
