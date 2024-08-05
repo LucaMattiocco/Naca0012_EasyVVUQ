@@ -16,7 +16,7 @@ This repository is dedicated to implementing uncertainty quantification for comp
 Before running the code, ensure the following steps are completed:
 
 1. **Set File Permissions:** Make sure all files have the necessary access permissions.
-2. **Update File Paths:** Modify the file paths in the scripts to match your local environment.
+2. **Update File Paths:** Modify the file paths in the json file to match your local environment.
 
 ## Code Structure
 
