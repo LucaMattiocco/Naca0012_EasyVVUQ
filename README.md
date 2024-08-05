@@ -32,3 +32,17 @@ A common issue is Star-CCM+ failing to run the simulations due to incorrect path
 
 ```bash
 "C:\Program Files\CD-adapco\Star-CCM+\16.06.007\star\bin\starccm+" -batch simulation.sim
+
+## Detailed Script Description
+
+Detailed Script Description
+Naca0012_EasyVVUQ_Diff_PCE_Order.py
+Author: Luca A. Mattiocco
+Email: luca.mattiocco@cranfield.ac.uk or luca.mattiocco@orange.fr
+Date: 31/07/24
+Version: 1.1
+
+Description
+This script facilitates uncertainty quantification for computational fluid dynamics (CFD) simulations using Polynomial Chaos Expansion (PCE) methods. It is designed to interface with STAR-CCM+ and can be adapted for different CFD scenarios. The script handles key parameters such as velocity, temperature, and pressure, incorporating probabilistic variations through normal distributions but can be tuned as user desires.
+
+Note: This script is part of a master's thesis project. While every effort has been made to ensure accuracy and functionality, it is provided "as is". Feel free to use, modify, and share, but please give credit where it's due!
