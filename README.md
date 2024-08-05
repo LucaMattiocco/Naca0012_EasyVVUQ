@@ -16,7 +16,7 @@ This repository is dedicated to implementing uncertainty quantification for comp
 Before running the code, ensure the following steps are completed:
 
 1. **Set File Permissions:** Make sure all files have the necessary access permissions.
-2. **Update File Paths:** Modify the file paths in the json file to match your local environment.
+2. **Update File Paths:** Modify the file paths in the scripts to match your local environment.
 
 ## Code Structure
 
@@ -55,6 +55,18 @@ This script facilitates uncertainty quantification for computational fluid dynam
 - `save_results_to_csv(statistical_moments, sobol_indices, qoi_name, order)`: Saves the statistical moments and Sobol indices to a CSV file.
 - `compute_statistics_and_sobol(results, qoi_name, order, field='Default')`: Computes and prints statistical moments and Sobol indices for a specified quantity of interest and field.
 - `plot_distribution(results, results_df, field, x_label, y_label='Default', plot_title=None, main_title=None, file_name='Default')`: Plots the distribution of samples and KDEs for a specified field and saves the plots to PNG and PDF files.
+
+## Files Generated
+
+The script will generate the following files:
+
+- **Sobol Indices Files:** CSV files containing Sobol indices for various quantities of interest.
+- **Plots:** PNG and PDF files of the distributions of samples and KDEs for specified fields.
+- **Pickle Files:** Serialized objects for storing intermediate results.
+- **Time Files:** Logs of the time taken for various stages of the simulation and analysis.
+- **Simulation Files:** STAR-CCM+ simulation files generated during the process.
+- **Statistical Moments Files:** CSV files containing computed statistical moments for quantities of interest.
+- **Results CSV Files:** Comprehensive CSV files summarizing the results of the uncertainty quantification.
 
 ## Usage Instructions
 
