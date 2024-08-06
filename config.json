@@ -1,0 +1,28 @@
+{
+    "template_file": "Macro_Naca0012_Komega_Optimized.java.jinja2",
+    "target_filename":"Macro_Naca0012_Komega_Optimized.java",
+    "campaign_work_dir": "Naca0012PCE_Order_",
+    "db_location_prefix": "sqlite:///", 
+    "campaign_name": "Naca0012M015",
+    "output_files": {
+        "Cl": "C:\\Thesis_Destinus\\Script\\Cl.csv",
+        "Cd": "C:\\Thesis_Destinus\\Script\\Cd.csv",
+        "L/D": "C:\\Thesis_Destinus\\Script\\AerodynamicsEfficiency.csv",
+        "L": "C:\\Thesis_Destinus\\Script\\Lift.csv",
+        "D": "C:\\Thesis_Destinus\\Script\\Drag.csv"
+    },
+    "output_columns": {
+        "Cl": "Cl Monitor: Cl Monitor",
+        "Cd": "Cd Monitor: Cd Monitor",
+        "L/D": "Aerodynamic Efficiency Monitor: Aerodynamic Efficiency Monitor",
+        "L": "Lift Monitor: Lift Monitor (N)",
+        "D": "Drag Monitor: Drag Monitor (N)"
+    },
+    "starccm_executable": "C:\\Program Files\\Siemens\\19.02.009-R8\\STAR-CCM+19.02.009-R8\\star\\lib\\win64\\clang15.0vc14.2-r8\\lib\\starccm+.exe",
+    "starccm_simulation_file": "C:\\Thesis_Destinus\\Script\\TestCase_Naca0012_STT_KOmega_Optimized.sim",
+    "App_name":"naca0012_simulation",
+    "pickle_file": "Naca0012.pickle",
+    "min_pce_order": 1,
+    "max_pce_order": 2,
+    "title_template": "Naca0012 at M=0.15 test case with PCE order = %i"
+}
