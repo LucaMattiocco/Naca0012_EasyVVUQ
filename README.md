@@ -16,7 +16,10 @@ This repository focuses on implementing uncertainty quantification for computati
 Before running the code, ensure the following steps are completed:
 
 1. **Set File Permissions:** Ensure all files have the necessary access permissions.
-2. **Update File Paths:** Modify the file paths in the scripts to match your local environment.
+2. **Update File Paths:** Modify the file paths in the json file to match your local environment.
+
+## Json
+You can tune as much as you want, just need to specify that if you want to run just one simulation, specify the number for exemple if you want order seven specify 7 and 7, if you want from order 3 to 7 specify 3 and 7.
 
 ## Code Structure
 
@@ -76,6 +79,12 @@ The script generates the following files:
     ```
 
 3. **View Results:** The results will be saved in the specified directories and can be viewed and analyzed using the provided plotting functions.
+
+## Tuning and Running Specific Simulations
+
+You can tune as much as you want. If you want to run just one simulation, specify the same number for both minimum and maximum PCE order. For example:
+- To run a simulation with order seven, specify `7` and `7`.
+- To run simulations from order 3 to 7, specify `3` and `7`.
 
 ## Contributing
 
