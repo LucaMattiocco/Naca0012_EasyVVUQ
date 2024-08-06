@@ -18,9 +18,6 @@ Before running the code, ensure the following steps are completed:
 1. **Set File Permissions:** Ensure all files have the necessary access permissions.
 2. **Update File Paths:** Modify the file paths in the json file to match your local environment.
 
-## Json
-You can tune as much as you want, just need to specify that if you want to run just one simulation, specify the number for exemple if you want order seven specify 7 and 7, if you want from order 3 to 7 specify 3 and 7.
-
 ## Code Structure
 
 1. **Directory Management:** Handles the organization and management of the repository.
