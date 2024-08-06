@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This repository is dedicated to implementing uncertainty quantification for computational fluid dynamics (CFD) simulations using Polynomial Chaos Expansion (PCE) methods. The main script, `Naca0012_EasyVVUQ_Diff_PCE_Order.py`, interfaces with STAR-CCM+ to facilitate the analysis and is adaptable for various CFD scenarios.
+This repository focuses on implementing uncertainty quantification for computational fluid dynamics (CFD) simulations using Polynomial Chaos Expansion (PCE) methods. The main script, `Naca0012_EasyVVUQ_Diff_PCE_Order.py`, interfaces with STAR-CCM+ to facilitate the analysis and is adaptable for various CFD scenarios.
 
 ## Repository Contents
 
@@ -15,18 +15,18 @@ This repository is dedicated to implementing uncertainty quantification for comp
 
 Before running the code, ensure the following steps are completed:
 
-1. **Set File Permissions:** Make sure all files have the necessary access permissions.
+1. **Set File Permissions:** Ensure all files have the necessary access permissions.
 2. **Update File Paths:** Modify the file paths in the scripts to match your local environment.
 
 ## Code Structure
 
-1. **Directory Management:** This section of the code handles the organization and management of the repository.
-2. **Simulation Tools Setup:** This section establishes the tools required for running the simulations.
-3. **Post-Processing:** This section focuses on analyzing and processing the simulation results.
+1. **Directory Management:** Handles the organization and management of the repository.
+2. **Simulation Tools Setup:** Establishes the tools required for running the simulations.
+3. **Post-Processing:** Focuses on analyzing and processing the simulation results.
 
 ## Common Issues
 
-A common issue is Star-CCM+ failing to run the simulations due to incorrect paths. To troubleshoot, run a single simulation using the Windows shell to verify that the paths are correctly configured.
+A common issue is STAR-CCM+ failing to run the simulations due to incorrect paths. To troubleshoot, run a single simulation using the Windows shell to verify that the paths are correctly configured.
 
 ## Detailed Script Description
 
@@ -34,12 +34,12 @@ A common issue is Star-CCM+ failing to run the simulations due to incorrect path
 
 **Author:** Luca A. Mattiocco  
 **Email:** [luca.mattiocco@cranfield.ac.uk](mailto:luca.mattiocco@cranfield.ac.uk) or [luca.mattiocco@orange.fr](mailto:luca.mattiocco@orange.fr)  
-**Date:** 31/07/24  
+**Date:** 06/08/24  
 **Version:** 1.1
 
 ### Description
 
-This script facilitates uncertainty quantification for computational fluid dynamics (CFD) simulations using Polynomial Chaos Expansion (PCE) methods. It is designed to interface with STAR-CCM+ and can be adapted for different CFD scenarios. The script handles key parameters such as velocity, temperature, and pressure, incorporating probabilistic variations through normal distributions but can be tuned as user desires.
+This script facilitates uncertainty quantification for CFD simulations using PCE methods. It interfaces with STAR-CCM+ and can be adapted for different CFD scenarios. The script handles key parameters such as velocity, temperature, and pressure, incorporating probabilistic variations through normal distributions.
 
 **Note:** This script is part of a master's thesis project. While every effort has been made to ensure accuracy and functionality, it is provided "as is". Feel free to use, modify, and share, but please give credit where it's due!
 
@@ -50,20 +50,18 @@ This script facilitates uncertainty quantification for computational fluid dynam
 - `define_params()`: Defines the parameters for the StarCCM+ model.
 - `define_vary()`: Defines the varying quantities for uncertainty quantification.
 - `run_pce_campaign(pce_order, use_files=True)`: Runs a PCE campaign for a StarCCM+ model simulation.
-- `compute_statistical_moments(results, qoi_name)`: Computes statistical moments for a specified quantity of interest.
-- `compute_sobol_indices(results, field)`: Computes Sobol indices for a specified field.
+- `extract_results(results, qoi_cols)`: Extracts statistical moments and Sobol indices for specified quantities of interest.
 - `save_results_to_csv(statistical_moments, sobol_indices, qoi_name, order)`: Saves the statistical moments and Sobol indices to a CSV file.
-- `compute_statistics_and_sobol(results, qoi_name, order, field='Default')`: Computes and prints statistical moments and Sobol indices for a specified quantity of interest and field.
-- `plot_distribution(results, results_df, field, x_label, y_label='Default', plot_title=None, main_title=None, file_name='Default')`: Plots the distribution of samples and KDEs for a specified field and saves the plots to PNG and PDF files.
+- `plot_distribution(results, results_df, field, x_label, y_label='Probability Density', plot_title='Distribution', main_title=None, file_name='distribution_plot')`: Plots the distribution of samples and KDEs for a specified field and saves the plots to PNG and PDF files.
 
 ## Files Generated
 
-The script will generate the following files:
+The script generates the following files:
 
 - **Sobol Indices Files:** CSV files containing Sobol indices for various quantities of interest.
 - **Plots:** PNG and PDF files of the distributions of samples and KDEs for specified fields.
 - **Pickle Files:** Serialized objects for storing intermediate results.
-- **Time Files:** Logs of the time taken for various stages of the simulation and analysis.
+- **Time Logs:** Logs of the time taken for various stages of the simulation and analysis.
 - **Simulation Files:** STAR-CCM+ simulation files generated during the process.
 - **Statistical Moments Files:** CSV files containing computed statistical moments for quantities of interest.
 - **Results CSV Files:** Comprehensive CSV files summarizing the results of the uncertainty quantification.
