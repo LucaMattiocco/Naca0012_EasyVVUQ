@@ -52,19 +52,18 @@ This script facilitates uncertainty quantification for CFD simulations using PCE
 - `run_pce_campaign(pce_order, use_files=True)`: Runs a PCE campaign for a StarCCM+ model simulation.
 - `extract_results(results, qoi_cols)`: Extracts statistical moments and Sobol indices for specified quantities of interest.
 - `save_results_to_csv(statistical_moments, sobol_indices, qoi_name, order)`: Saves the statistical moments and Sobol indices to a CSV file.
-- `plot_distribution(results, results_df, field, x_label, y_label='Probability Density', plot_title='Distribution', main_title=None, file_name='distribution_plot')`: Plots the distribution of samples and KDEs for a specified field and saves the plots to PNG and PDF files.
+- `plot_distribution(results, results_df, field, x_label, y_label='Probability Density', plot_title='Distribution', main_title=None, file_name='distribution_plot')`: Plots the raw distribution of samples and PCE Calculated distribution for a specified field and saves the plots to PNG and PDF files.
 
 ## Files Generated
 
 The script generates the following files:
 
-- **Sobol Indices Files:** CSV files containing Sobol indices for various quantities of interest.
-- **Plots:** PNG and PDF files of the distributions of samples and KDEs for specified fields.
+- **Sobol Indices and Statistical Moments Files:** CSV files containing Sobol indices for various quantities of interest and computed statistical moments for quantities of interest..
+- **Plots:** PNG and PDF files of the distributions of samples and PCE for specified fields.
 - **Pickle Files:** Serialized objects for storing intermediate results.
 - **Time Logs:** Logs of the time taken for various stages of the simulation and analysis.
 - **Simulation Files:** STAR-CCM+ simulation files generated during the process.
-- **Statistical Moments Files:** CSV files containing computed statistical moments for quantities of interest.
-- **Results CSV Files:** Comprehensive CSV files summarizing the results of the uncertainty quantification.
+- **Results CSV Files:** Comprehensive CSV files of the last iterated simulation on starCCM for each field.
 
 ## Usage Instructions
 
@@ -89,7 +88,7 @@ Contributions are welcome! Please fork the repository and submit pull requests w
 
 ## License
 
-This project is licensed under the MIT License.
+This project is undertaken as part of a master's thesis at Cranfield University in cooperation with the Swiss company Destinus.
 
 ## Contact Information
 
