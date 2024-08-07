@@ -28,6 +28,7 @@ Before running the code, ensure the following steps are completed:
 ## Common Issues
 
 A common issue is STAR-CCM+ failing to run the simulations due to incorrect paths. To troubleshoot, run a single simulation using the Windows shell to verify that the paths are correctly configured.
+Another common issue is the number of bins selected for the plots. If the number of bins is too high, the plots might look very odd.
 
 ## Detailed Script Description
 
