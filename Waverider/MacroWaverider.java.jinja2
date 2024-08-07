@@ -1,0 +1,108 @@
+// Simcenter STAR-CCM+ macro: MacroWaverider.java
+// Written by Simcenter STAR-CCM+ 19.02.009
+package macro;
+
+import java.util.*;
+
+
+import star.common.*;
+import star.base.neo.*;
+import star.flow.*;
+import star.energy.*;
+import star.meshing.*;
+
+public class MacroWaverider extends StarMacro {
+
+
+  // Define flow conditions
+  double mach={{ velocity / (gamma * Ru * static_temp / M_air) ** power }};
+  double velocity={{ velocity }}; // m/s
+  double ref_pressure={{ ref_pressure }}; // Pa
+  double static_temp={{ static_temp }}; // Kelvin
+
+
+  public void execute() {
+    execute0();
+  }
+
+  private void execute0() {
+
+    Simulation simulation_0 = 
+      getActiveSimulation();
+
+    Solution solution_0 = 
+      simulation_0.getSolution();
+
+    solution_0.clearSolution();
+
+    MeshPipelineController meshPipelineController_0 = 
+      simulation_0.get(MeshPipelineController.class);
+
+    meshPipelineController_0.generateVolumeMesh();
+
+    PhysicsContinuum physicsContinuum_0 = 
+      ((PhysicsContinuum) simulation_0.getContinuumManager().getContinuum("Physics 1"));
+
+    Units units_1 = 
+      ((Units) simulation_0.getUnitsManager().getObject("Pa"));
+
+    physicsContinuum_0.getReferenceValues().get(ReferencePressure.class).setValueAndUnits(ref_pressure, units_1);
+
+    StaticTemperatureProfile staticTemperatureProfile_0 = 
+      physicsContinuum_0.getInitialConditions().get(StaticTemperatureProfile.class);
+
+    Units units_2 = 
+      ((Units) simulation_0.getUnitsManager().getObject("K"));
+
+    staticTemperatureProfile_0.getMethod(ConstantScalarProfileMethod.class).getQuantity().setValueAndUnits(static_temp, units_2);
+
+    VelocityProfile velocityProfile_0 = 
+      physicsContinuum_0.getInitialConditions().get(VelocityProfile.class);
+
+    Units units_3 = 
+      ((Units) simulation_0.getUnitsManager().getObject("m/s"));
+
+    velocityProfile_0.getMethod(ConstantVectorProfileMethod.class).getQuantity().setComponentsAndUnits(velocity, 0.0, 0.0, units_3);
+
+    Region region_0 = 
+      simulation_0.getRegionManager().getRegion("fluid");
+
+    Boundary boundary_0 = 
+      region_0.getBoundaryManager().getBoundary("farfield");
+
+    MachNumberProfile machNumberProfile_0 = 
+      boundary_0.getValues().get(MachNumberProfile.class);
+
+    Units units_0 = 
+      ((Units) simulation_0.getUnitsManager().getObject(""));
+
+    machNumberProfile_0.getMethod(ConstantScalarProfileMethod.class).getQuantity().setValueAndUnits(mach, units_0);
+
+    StaticTemperatureProfile staticTemperatureProfile_1 = 
+      boundary_0.getValues().get(StaticTemperatureProfile.class);
+
+    staticTemperatureProfile_1.getMethod(ConstantScalarProfileMethod.class).getQuantity().setValueAndUnits(static_temp, units_2);
+
+    ResidualPlot residualPlot_0 = 
+      ((ResidualPlot) simulation_0.getPlotManager().getPlot("Residuals"));
+
+    residualPlot_0.openInteractive();
+
+    simulation_0.getSimulationIterator().run();
+
+    MonitorPlot monitorPlot_1 = 
+      ((MonitorPlot) simulation_0.getPlotManager().getPlot("Drag Monitor Plot"));
+
+    monitorPlot_1.export(resolvePath("C:\\Thesis_Destinus\\Script\\Drag.csv"), ",");
+
+    MonitorPlot monitorPlot_2 = 
+      ((MonitorPlot) simulation_0.getPlotManager().getPlot("L/D Monitor Plot"));
+
+    monitorPlot_2.export(resolvePath("C:\\Thesis_Destinus\\Script\\Lift_to_Drag_Ratio.csv"), ",");
+
+    MonitorPlot monitorPlot_3 = 
+      ((MonitorPlot) simulation_0.getPlotManager().getPlot("Lift Monitor Plot"));
+
+    monitorPlot_3.export(resolvePath("C:\\Thesis_Destinus\\Script\\Lift.csv"), ",");
+  }
+}
