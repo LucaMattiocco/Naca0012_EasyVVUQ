@@ -42,7 +42,7 @@ A common issue is STAR-CCM+ failing to run the simulations due to incorrect path
 
 This script facilitates uncertainty quantification for CFD simulations using PCE methods. It interfaces with STAR-CCM+ and can be adapted for different CFD scenarios. The script handles key parameters such as velocity, temperature, and pressure, incorporating probabilistic variations through normal distributions.
 
-**Note:** This script is part of a master's thesis project. While every effort has been made to ensure accuracy and functionality, it is provided "as is". Feel free to use, modify, and share, but please give credit where it's due!
+**Note:** This script is part of a 3 months master's thesis project at Cranfield University. While every effort has been made to ensure accuracy and functionality, it is provided "as is". Feel free to use, modify, and share, but please give credit where it's due!
 
 ### Main Functions
 
