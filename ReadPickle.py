@@ -1,21 +1,21 @@
 import pickle
 
-# Chemin vers le fichier pickle
+# Path to the pickle file
 file_path = 'C:\\Thesis_Destinus\\Script\\Naca0012.pickle'
 
-# Ouvrir le fichier en mode lecture binaire
+# Open the file in binary read mode
 with open(file_path, 'rb') as file:
-    # Charger les données du fichier pickle
+    # Load the data from the pickle file
     data = pickle.load(file)
 
-# Afficher le type de l'objet chargé
+# Display the type of the loaded object
 print(f"Type of loaded object: {type(data)}")
 
-# Afficher les attributs et les méthodes de l'objet
+# Display the attributes and methods of the object
 print("\nAttributes and methods of the loaded object:")
 print(dir(data))
 
-# Accéder et appeler les méthodes spécifiques pour obtenir les valeurs souhaitées
+# Access and call specific methods to get the desired values
 if hasattr(data, 'sobols_first'):
     sobols_first_values = data.sobols_first()
     print("\nSobol's first order indices:")
