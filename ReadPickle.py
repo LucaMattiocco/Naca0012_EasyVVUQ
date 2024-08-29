@@ -1,7 +1,7 @@
 import pickle
 
 # Path to the pickle file
-file_path = 'C:\\Thesis_Destinus\\Script\\Naca0012.pickle'
+file_path = 'C:\\YourAccess\\Naca0012.pickle'
 
 # Open the file in binary read mode
 with open(file_path, 'rb') as file:
