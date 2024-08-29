@@ -5,11 +5,11 @@
     "db_location_prefix": "sqlite:///", 
     "campaign_name": "Naca0012M015",
     "output_files": {
-        "Cl": "C:\\Thesis_Destinus\\Script\\Cl.csv",
-        "Cd": "C:\\Thesis_Destinus\\Script\\Cd.csv",
-        "L/D": "C:\\Thesis_Destinus\\Script\\AerodynamicsEfficiency.csv",
-        "L": "C:\\Thesis_Destinus\\Script\\Lift.csv",
-        "D": "C:\\Thesis_Destinus\\Script\\Drag.csv"
+        "Cl": "C:\\YourFileName\\Script\\Cl.csv",
+        "Cd": "C:\\YourFileName\\Script\\Cd.csv",
+        "L/D": "C:\\YourFileName\\Script\\AerodynamicsEfficiency.csv",
+        "L": "C:\\YourFileName\\Script\\Lift.csv",
+        "D": "C:\\YourFileName\\Script\\Drag.csv"
     },
     "output_columns": {
         "Cl": "Cl Monitor: Cl Monitor",
@@ -19,7 +19,7 @@
         "D": "Drag Monitor: Drag Monitor (N)"
     },
     "starccm_executable": "C:\\Program Files\\Siemens\\19.02.009-R8\\STAR-CCM+19.02.009-R8\\star\\lib\\win64\\clang15.0vc14.2-r8\\lib\\starccm+.exe",
-    "starccm_simulation_file": "C:\\Thesis_Destinus\\Script\\TestCase_Naca0012_STT_KOmega_Optimized.sim",
+    "starccm_simulation_file": "C:\\YourFileName\\TestCase_Naca0012_STT_KOmega_Optimized.sim",
     "App_name":"naca0012_simulation",
     "pickle_file": "Naca0012.pickle",
     "min_pce_order": 1,
