@@ -17,7 +17,7 @@ Y(\boldsymbol{\xi}) = \sum_{i=0}^{\infty} c_i \Psi_i(\boldsymbol{\xi})
 $$
 
 Where:
-- $ Y(\boldsymbol{\xi}) $ is the model output (a quantity of interest, QoI).
+- $Y(\boldsymbol{\xi})$ is the model output (a quantity of interest, QoI).
 - $ c_i $ are the expansion coefficients that are determined through simulations.
 - $ \Psi_i(\boldsymbol{\xi}) $ are orthogonal polynomials (e.g., Hermite polynomials for Gaussian distributions) which are functions of the random input variables \( \boldsymbol{\xi} \).
 
