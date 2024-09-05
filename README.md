@@ -10,16 +10,16 @@ This repository focuses on implementing uncertainty quantification for computati
 
 ### Mathematical Formulation
 
-Given a model output \( Y \) dependent on uncertain input parameters \( \boldsymbol{\xi} = (\xi_1, \xi_2, \dots, \xi_n) \), where \( \xi_i \) are random variables with known probability distributions, the Polynomial Chaos Expansion of the model output is given by:
+Given a model output $ Y $ dependent on uncertain input parameters $ \boldsymbol{\xi} = (\xi_1, \xi_2, \dots, \xi_n) $, where $ \xi_i $ are random variables with known probability distributions, the Polynomial Chaos Expansion of the model output is given by:
 
 $$
 Y(\boldsymbol{\xi}) = \sum_{i=0}^{\infty} c_i \Psi_i(\boldsymbol{\xi})
 $$
 
 Where:
-- \( Y(\boldsymbol{\xi}) \) is the model output (a quantity of interest, QoI).
-- \( c_i \) are the expansion coefficients that are determined through simulations.
-- \( \Psi_i(\boldsymbol{\xi}) \) are orthogonal polynomials (e.g., Hermite polynomials for Gaussian distributions) which are functions of the random input variables \( \boldsymbol{\xi} \).
+- $ Y(\boldsymbol{\xi}) $ is the model output (a quantity of interest, QoI).
+- $ c_i $ are the expansion coefficients that are determined through simulations.
+- $ \Psi_i(\boldsymbol{\xi}) $ are orthogonal polynomials (e.g., Hermite polynomials for Gaussian distributions) which are functions of the random input variables \( \boldsymbol{\xi} \).
 
 In practice, the expansion is truncated to a finite number of terms:
 
@@ -27,7 +27,7 @@ $$
 Y(\boldsymbol{\xi}) \approx \sum_{i=0}^{P} c_i \Psi_i(\boldsymbol{\xi})
 $$
 
-Where \( P \) is the highest order of the polynomials included in the expansion.
+Where $ P $ is the highest order of the polynomials included in the expansion.
 
 ### Key Concepts:
 
